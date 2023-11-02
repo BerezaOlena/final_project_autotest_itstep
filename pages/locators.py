@@ -19,4 +19,18 @@ class BasePageLocators:
     CART = (By.XPATH, "//img[@src='images/cart.png']")
     CART_COUNT = (By.XPATH, "//span[@class='qty_products']")
 
+    HITS = (By.XPATH, "//span[text()='Хиты']")
+    NEW = (By.XPATH, "//span[text()='Новинки']")
+    SALE = (By.XPATH, "//span[text()='Скидки']")
+    SAMSUNG = (By.XPATH, "//div[text()='Samsung']")
+    SAMSUNG_A310 = (By.XPATH, "//a[text()='Samsung J701']")
+
+    SUBSCRIBED_FOOTER = (By.XPATH, "//button[text()='Подписаться!']")
+    SUBSCRIBED_EMAIL_FOOTER = (By.XPATH, "//input[@class='newsletter_input']")
+    NEWSLETTER_ICON = (By.XPATH, "//img[@src='images/send.png']")
+    NEWSLETTER_TITLE = (By.XPATH, "//div[@class='newsletter_title']")
+    NEWSLETTER_TEXT = (By.XPATH, "//p[text()='...и узнайте о новинках и скидках первыми']")
+    LOGO_FOOTER = (By.XPATH, "img[@src='images/logo-footer.png']")
+    TELEGRAM_FOOTER = (By.XPATH, "//a[@href='https://t.me/casenik_com_ua']")
+    TELEGRAM_PHONE = (By.XPATH, "//div[@class='footer_phone']")
 
