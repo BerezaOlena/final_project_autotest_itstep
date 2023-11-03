@@ -48,7 +48,7 @@ class BasePageLocators:
     ARRIVALS_TABLE = (By.XPATH, "//div[@class='product_panel panel active']")
     ARRIVALS_TABLE_8 = (
         By.XPATH,
-        "//div[@class='new-img']//a[@href='product/gidrogelevaya-broneplenka-plenka-smartex-xiaomi-redmi-note-5a-prime']")
+        "//div[@class='product_name']//a[text()='Гидрогелевая бронепленка пленка Smartex Xiaomi Redmi Note 5A Prime']")
 
     HITS_VIEW_ALL = (By.XPATH, "//div[@class='best_nav_container']//a[@href='main/showHit']")
     HITS_PREVIOUS = (By.XPATH, "//div[@class='best_prev best_nav']//i[@class='fas fa-chevron-left']")
@@ -56,7 +56,7 @@ class BasePageLocators:
     HITS_TABLE = (By.XPATH, "//div[@class='bestsellers_panel panel active']//div[@class='slick-list draggable']")
     HITS_TABLE_5 = (
         By.XPATH,
-        "//div[@class='slick-slide']//div[@class='bestsellers_name']//a[@href='product/komp-yuternaya-myshka-hoco-di04-bt-wireless-mouse-black']")
+        "//div[@data-slick-index='4']//a[text()='Компьютерная мышка HOCO DI04 BT Wireless Mouse Black']")
 
     TRENDS_PREVIOUS = (
         By.XPATH, "//div[@class='trends_prev trends_nav slick-arrow']//i[@class='fas fa-angle-left ml-auto]")
