@@ -63,5 +63,4 @@ class BasePageLocators:
     TRENDS_NEXT = (
         By.XPATH, "//div[@class='trends_next trends_nav slick-arrow']//i[@class='fas fa-angle-right ml-auto']")
     TRENDS_TABLE_2 = (
-        By.XPATH,
-        "//div[@class='slick-slide slick-active']//div[@class='trends_image']//a[@href='product/naushniki-hoco-es20-plus-airpods2-bluetooth-white']")
+        By.XPATH, "//div[@data-slick-index='7']//a[text()='Наушники HOCO ES20 PLUS AirPods2 Bluetooth/ White']")
