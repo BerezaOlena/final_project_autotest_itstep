@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class BasePageLocators:
+    # HEADER
     LOGIN_SIGNUP = (By.XPATH, "//div[@class='top_bar_user']/a[@href='user/login']")
     FEEDBACK = (By.XPATH, "//a[@href='singlepage/feedback']")
     DELIVERY = (By.XPATH, "//a[@href='singlepage/delivery']")
@@ -25,6 +26,7 @@ class BasePageLocators:
     SAMSUNG = (By.XPATH, "//div[text()='Samsung']")
     SAMSUNG_A310 = (By.XPATH, "//a[text()='Samsung J701']")
 
+    # FOOTER
     SUBSCRIBED_FOOTER = (By.XPATH, "//button[text()='Подписаться!']")
     SUBSCRIBED_EMAIL_FOOTER = (By.XPATH, "//input[@class='newsletter_input']")
     NEWSLETTER_ICON = (By.XPATH, "//img[@src='images/send.png']")
@@ -34,3 +36,32 @@ class BasePageLocators:
     TELEGRAM_FOOTER = (By.XPATH, "//a[@href='https://t.me/casenik_com_ua']")
     TELEGRAM_PHONE = (By.XPATH, "//div[@class='footer_phone']")
 
+    # BODY
+    REFUND = (By.XPATH, "//div[@class='characteristics']//div[text()='Возврат средств']")
+    FREE_DELIVERY = (By.XPATH, "//div[@class='characteristics']//div[text()='Бесплатная доставка']")
+    DELAYED_PAYMENT = (By.XPATH, "//div[@class='characteristics']//div[text()='Отсрочка оплаты']")
+    TECHNICAL_SUPPORT = (By.XPATH, "//div[@class='characteristics']//div[text()='Тех.поддержка']")
+
+    ARRIVALS_VIEW_ALL = (By.XPATH, "//div[@class='arrivals_nav_container']//a[@href='main/showNew']")
+    ARRIVALS_PREVIOUS = (By.XPATH, "//div[@class='arrivals_nav_container']//i[@class='fas fa-chevron-left']")
+    ARRIVALS_NEXT = (By.XPATH, "//div[@class='arrivals_nav_container']//i[@class='fas fa-chevron-right']")
+    ARRIVALS_TABLE = (By.XPATH, "//div[@class='product_panel panel active']")
+    ARRIVALS_TABLE_8 = (
+        By.XPATH,
+        "//div[@class='new-img']//a[@href='product/gidrogelevaya-broneplenka-plenka-smartex-xiaomi-redmi-note-5a-prime']")
+
+    HITS_VIEW_ALL = (By.XPATH, "//div[@class='best_nav_container']//a[@href='main/showHit']")
+    HITS_PREVIOUS = (By.XPATH, "//div[@class='best_prev best_nav']//i[@class='fas fa-chevron-left']")
+    HITS_NEXT = (By.XPATH, "//div[@class='best_next best_nav']//i[@class='fas fa-chevron-right']")
+    HITS_TABLE = (By.XPATH, "//div[@class='bestsellers_panel panel active']//div[@class='slick-list draggable']")
+    HITS_TABLE_5 = (
+        By.XPATH,
+        "//div[@class='slick-slide']//div[@class='bestsellers_name']//a[@href='product/komp-yuternaya-myshka-hoco-di04-bt-wireless-mouse-black']")
+
+    TRENDS_PREVIOUS = (
+        By.XPATH, "//div[@class='trends_prev trends_nav slick-arrow']//i[@class='fas fa-angle-left ml-auto]")
+    TRENDS_NEXT = (
+        By.XPATH, "//div[@class='trends_next trends_nav slick-arrow']//i[@class='fas fa-angle-right ml-auto']")
+    TRENDS_TABLE_2 = (
+        By.XPATH,
+        "//div[@class='slick-slide slick-active']//div[@class='trends_image']//a[@href='product/naushniki-hoco-es20-plus-airpods2-bluetooth-white']")

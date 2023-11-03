@@ -5,8 +5,8 @@ from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import ElementNotInteractableException
 from selenium.common.exceptions import ElementClickInterceptedException
 from selenium.webdriver.support import expected_conditions as EC
-from pages.locators import BasePageLocators
-from settings import sets
+# from pages.locators import BasePageLocators
+from ..settings import sets
 import time
 
 
@@ -14,9 +14,9 @@ class BasePage:
     def __init__(self, browser, url):
         self.browser = browser
         self.url = url
-        self.browser.implicity_wait(sets.IMPLICITLY_WAIT)
+        self.browser.implicitly_wait(sets.IMPLICITLY_WAIT)
 
-    def explicit_wait(self, value):
+    def explicitly_wait(self, value):
         time.sleep(value)
 
     def open(self):
