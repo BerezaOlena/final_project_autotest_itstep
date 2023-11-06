@@ -5,11 +5,12 @@ class BasePageLocators:
     # HEADER
     PHONE = (By.XPATH, "//div[text()='+38 098 911 95 22']")
     EMAIL = (By.XPATH, "//a[@href='mailto:']")
+    DETAILS = (By.XPATH, "//a[text()='Детали сотрудничества']")
     FEEDBACK = (By.XPATH, "//a[@href='singlepage/feedback']")
     DELIVERY = (By.XPATH, "//a[@href='singlepage/delivery']")
     WARRANTY = (By.XPATH, "//a[@href='singlepage/warranty']")
-    DETAILS = (By.XPATH, "//a[text()='Детали сотрудничества']")
     LOGIN_SIGNUP = (By.XPATH, "//div[@class='top_bar_user']/a[@href='user/login']")
+
     LOGO_ICON = (By.XPATH, "//img[@src='images/logo.png']")
     SEARCH_INPUT = (By.XPATH, "//input[@placeholder='Поиск товара...']")
     SEARCH_BUTTON = (By.XPATH, "//button[@class='header_search_button trans_300']")
@@ -22,11 +23,11 @@ class BasePageLocators:
     CURRENCY_USD = (By.XPATH, "//option[text()='USD']")
     CURRENCY_EUR = (By.XPATH, "//option[text()='EUR']")
 
+    SAMSUNG = (By.XPATH, "//div[text()='Samsung']")
+    SAMSUNG_J701 = (By.XPATH, "//a[text()='Samsung J701']")
     HITS = (By.XPATH, "//span[text()='Хиты']")
     NEW = (By.XPATH, "//span[text()='Новинки']")
     SALE = (By.XPATH, "//span[text()='Скидки']")
-    SAMSUNG = (By.XPATH, "//div[text()='Samsung']")
-    SAMSUNG_A310 = (By.XPATH, "//a[text()='Samsung J701']")
 
     # FOOTER
     SUBSCRIBED_FOOTER = (By.XPATH, "//button[text()='Подписаться!']")
@@ -34,9 +35,9 @@ class BasePageLocators:
     NEWSLETTER_ICON = (By.XPATH, "//img[@src='images/send.png']")
     NEWSLETTER_TITLE = (By.XPATH, "//div[@class='newsletter_title']")
     NEWSLETTER_TEXT = (By.XPATH, "//p[text()='...и узнайте о новинках и скидках первыми']")
-    LOGO_FOOTER = (By.XPATH, "img[@src='images/logo-footer.png']")
+    LOGO_FOOTER = (By.XPATH, "//img[@src='images/send.png']")
     TELEGRAM_FOOTER = (By.XPATH, "//a[@href='https://t.me/casenik_com_ua']")
-    TELEGRAM_PHONE = (By.XPATH, "//div[@class='footer_phone']")
+    PHONE_FOOTER = (By.XPATH, "//div[@class='footer_phone']")
 
 
 class MainPageLocators:
@@ -57,8 +58,9 @@ class MainPageLocators:
     HITS_NEXT = (By.XPATH, "//div[@class='best_next best_nav']//i[@class='fas fa-chevron-right']")
     HITS_TABLE = (By.XPATH, "//div[@class='bestsellers_panel panel active']//div[@class='slick-list draggable']")
     HITS_TABLE_5 = (By.XPATH, "//div[@class='best_sellers']//div[@data-slick-index='4']")
+
     TRENDS_PREVIOUS = (
-        By.XPATH, "//div[@class='trends_prev trends_nav slick-arrow']//i[@class='fas fa-angle-left ml-auto]")
+        By.XPATH, "//div[@class='trends_prev trends_nav slick-arrow']//i[@class='fas fa-angle-left ml-auto']")
     TRENDS_NEXT = (
         By.XPATH, "//div[@class='trends_next trends_nav slick-arrow']//i[@class='fas fa-angle-right ml-auto']")
     TRENDS_TABLE_2 = (By.XPATH, "//div[@class='trends_slider_container']//div[@data-slick-index='7']")
