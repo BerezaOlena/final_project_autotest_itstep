@@ -36,6 +36,8 @@ class BasePageLocators:
     TELEGRAM_FOOTER = (By.XPATH, "//a[@href='https://t.me/casenik_com_ua']")
     TELEGRAM_PHONE = (By.XPATH, "//div[@class='footer_phone']")
 
+
+class MainPageLocators:
     # BODY
     REFUND = (By.XPATH, "//div[@class='characteristics']//div[text()='Возврат средств']")
     FREE_DELIVERY = (By.XPATH, "//div[@class='characteristics']//div[text()='Бесплатная доставка']")
@@ -46,21 +48,15 @@ class BasePageLocators:
     ARRIVALS_PREVIOUS = (By.XPATH, "//div[@class='arrivals_nav_container']//i[@class='fas fa-chevron-left']")
     ARRIVALS_NEXT = (By.XPATH, "//div[@class='arrivals_nav_container']//i[@class='fas fa-chevron-right']")
     ARRIVALS_TABLE = (By.XPATH, "//div[@class='product_panel panel active']")
-    ARRIVALS_TABLE_8 = (
-        By.XPATH,
-        "//div[@class='product_name']//a[text()='Гидрогелевая бронепленка пленка Smartex Xiaomi Redmi Note 5A Prime']")
+    ARRIVALS_TABLE_8 = (By.XPATH, "//div[@class='new_arrivals']//div[@data-slick-index='2']/div[2]")
 
     HITS_VIEW_ALL = (By.XPATH, "//div[@class='best_nav_container']//a[@href='main/showHit']")
     HITS_PREVIOUS = (By.XPATH, "//div[@class='best_prev best_nav']//i[@class='fas fa-chevron-left']")
     HITS_NEXT = (By.XPATH, "//div[@class='best_next best_nav']//i[@class='fas fa-chevron-right']")
     HITS_TABLE = (By.XPATH, "//div[@class='bestsellers_panel panel active']//div[@class='slick-list draggable']")
-    HITS_TABLE_5 = (
-        By.XPATH,
-        "//div[@data-slick-index='4']//a[text()='Компьютерная мышка HOCO DI04 BT Wireless Mouse Black']")
-
+    HITS_TABLE_5 = (By.XPATH, "//div[@class='best_sellers']//div[@data-slick-index='4']")
     TRENDS_PREVIOUS = (
         By.XPATH, "//div[@class='trends_prev trends_nav slick-arrow']//i[@class='fas fa-angle-left ml-auto]")
     TRENDS_NEXT = (
         By.XPATH, "//div[@class='trends_next trends_nav slick-arrow']//i[@class='fas fa-angle-right ml-auto']")
-    TRENDS_TABLE_2 = (
-        By.XPATH, "//div[@data-slick-index='7']//a[text()='Наушники HOCO ES20 PLUS AirPods2 Bluetooth/ White']")
+    TRENDS_TABLE_2 = (By.XPATH, "//div[@class='trends_slider_container']//div[@data-slick-index='7']")
