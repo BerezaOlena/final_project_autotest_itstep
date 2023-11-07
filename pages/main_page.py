@@ -254,5 +254,3 @@ class MainPage(base_page.BasePage):
         assert self.is_element_present(*locators.BasePageLocators.PHONE_FOOTER), \
             "Button 'phone_footer' is not present"
         print(f"{inspect.currentframe().f_code.co_name} - OK")
-
-
