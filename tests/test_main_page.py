@@ -41,18 +41,6 @@ class TestMainPage:
         page.is_button_sale()
         page.is_button_hits()
 
-    def test_main_page_footer(self, browser):
-        self.link_to_cabinet = browser.current_url
-        page = MainPage(browser, self.link_to_cabinet)
-        page.is_button_subscribed()
-        page.is_button_subscribed_email()
-        page.is_button_newsletter_icon()
-        page.is_button_newsletter_text()
-        page.is_button_newsletter_title()
-        page.is_button_logo_footer()
-        page.is_button_telegram()
-        page.is_button_phone_footer()
-
     def test_main_page_body(self, browser):
         self.link_to_cabinet = browser.current_url
         page = MainPage(browser, self.link_to_cabinet)
@@ -74,7 +62,17 @@ class TestMainPage:
         page.is_button_trends_next()
         page.is_button_trends_table_2()
 
-
+    def test_main_page_footer(self, browser):
+        self.link_to_cabinet = browser.current_url
+        page = MainPage(browser, self.link_to_cabinet)
+        page.is_button_subscribed()
+        page.is_button_subscribed_email()
+        page.is_button_newsletter_icon()
+        page.is_button_newsletter_text()
+        page.is_button_newsletter_title()
+        page.is_button_logo_footer()
+        page.is_button_telegram()
+        page.is_button_phone_footer()
 
     # def test_login_logout(self, browser):
     #     link_to_site = browser.current_url
