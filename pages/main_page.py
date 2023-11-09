@@ -149,6 +149,28 @@ class MainPage(base_page.BasePage):
             "Button 'technical_support' is not present"
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
+    def is_button_slider(self):
+        assert self.is_element_present(*locators.MainPageLocators.SLIDER), \
+            "Button 'slider' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
+    def is_button_slider_3(self):
+        assert self.is_element_present(*locators.MainPageLocators.SLIDER_3), \
+            "Button 'slider_3' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
+    def is_button_category_charging(self):
+        assert self.is_element_present(*locators.MainPageLocators.CATEGORY_CHARGING), \
+            "Button 'category_charging' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
+    def is_button_category_charging_wireless(self):
+        assert self.hover_action(*locators.MainPageLocators.CATEGORY_CHARGING), \
+            "Button 'category_charging' is not present or intractable"
+        assert self.is_element_present(*locators.MainPageLocators.CATEGORY_CHARGING_WIRELESS), \
+            "Button 'category_charging_wireless' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
     def is_button_arrivals_view_all(self):
         assert self.is_element_present(*locators.MainPageLocators.ARRIVALS_VIEW_ALL), \
             "Button ''arrivals_view_all'' is not present"
@@ -223,6 +245,19 @@ class MainPage(base_page.BasePage):
     def is_button_subscribed_email(self):
         assert self.is_element_present(*locators.BasePageLocators.SUBSCRIBED_EMAIL_FOOTER), \
             "Button 'subscribed_email' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
+    def subscribed_email_input(self, email):
+        assert self.input_data(*locators.BasePageLocators.SUBSCRIBED_EMAIL_FOOTER, email), \
+            "Element 'subscribed_email' is not present"
+        self.explicitly_wait(5)
+        assert self.click_element(*locators.BasePageLocators.SUBSCRIBED_FOOTER), \
+            "Element 'subscribed' is not present or intractable"
+        print(f"\n{inspect.currentframe().f_code.co_name} - OK")
+
+    def is_alert_success_subscribed(self):
+        assert self.is_element_appears_after_while(*locators.BasePageLocators.ALERT_SUCCESS, timeout=5), \
+            "Button 'alert_success_subscribed' is not present"
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_button_newsletter_icon(self):

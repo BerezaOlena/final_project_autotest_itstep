@@ -2,6 +2,8 @@ import pytest
 from ..pages.base_page import BasePage
 from ..pages.main_page import MainPage
 from ..settings import sets
+import random
+
 
 @pytest.mark.smoke
 @pytest.mark.regression
@@ -9,7 +11,8 @@ from ..settings import sets
 class TestMainPage:
 
     def setup_method(self):
-        pass
+        hash_name = "%032x" % random.getrandbits(128)
+        self.email_for_subscribe = f"{hash_name}@mail.com"
 
     def test_get_main_page(self, browser):
         page = BasePage(browser, sets.PROD_SERVER)
@@ -48,6 +51,10 @@ class TestMainPage:
         page.is_button_free_delivery()
         page.is_button_delayed_payment()
         page.is_button_technical_support()
+        page.is_button_slider()
+        page.is_button_slider_3()
+        page.is_button_category_charging()
+        page.is_button_category_charging_wireless()
         page.is_button_arrivals_view_all()
         page.is_button_arrivals_previous()
         page.is_button_arrivals_next()
@@ -74,8 +81,17 @@ class TestMainPage:
         page.is_button_telegram()
         page.is_button_phone_footer()
 
-    # def test_login_logout(self, browser):
-    #     link_to_site = browser.current_url
+    def test_main_page_subscribed_action(self, browser):
+        self.link_to_cabinet = browser.current_url
+        page = MainPage(browser, self.link_to_cabinet)
+        page.subscribed_email_input(self.email_for_subscribe)
+        page.is_alert_success_subscribed()
 
-
-
+# pytest -s -v
+# pytest -s -v --browser_name="firefox"
+# pytest -s -v --browser_mode="gui"
+# pytest -s -v --browser_window_size="max"
+# pytest -s -v --browser_name="firefox" --browser_mode="gui"
+# pytest -s -v --browser_name="firefox" --browser_window_size="max"
+# pytest -s -v --browser_mode="gui" --browser_window_size="max"
+# pytest -s -v --browser_name="firefox" --browser_mode="gui" --browser_window_size="max"
