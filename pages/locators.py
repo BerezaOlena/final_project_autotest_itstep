@@ -73,16 +73,85 @@ class MainPageLocators:
         By.XPATH, "//div[@class='trends_next trends_nav slick-arrow']//i[@class='fas fa-angle-right ml-auto']")
     TRENDS_TABLE_2 = (By.XPATH, "//div[@class='trends_slider_container']//div[@data-slick-index='7']")
 
+
+class OrderPageLocators:
     # PRODUCT_CART
-    ARRIVALS_TABLE_8_TO_CART = (
-        By.XPATH, "//div[@class='new_arrivals']//div[@data-slick-index='2']/div[2]//button[@class='product_cart_button']")
-    COUNT_PRODUCT_IN_CART = (
-        By.XPATH, "//div[@id='cart']//td[text()='1 шт. ']")
+    ARRIVALS_TABLE_8_TO_CART = (By.XPATH, "//button[@class='product_cart_button button cart_button']")
+    CART_TITLE = (By.XPATH, "//h4[@id='myModalLabel']")
+    BUTTON_CLOSE = (By.XPATH, "//div[@id='cart']//button[@class='close']")
+    COUNT_PRODUCT_IN_CART = (By.XPATH, "//div[@id='cart']//td[text()='1 шт. ']")
     CONTINUE_SHOPPING = (
         By.XPATH, "//div[@class='modal fade show']//div[@class='modal-footer']//button[@class='btn btn-default']")
     ORDER = (By.XPATH, "//div[@class='modal fade show']//div[@class='modal-footer']//a[@class='btn btn-primary']")
     CLEAR_CART = (
         By.XPATH, "//div[@class='modal fade show']//div[@class='modal-footer']//button[@class='btn btn-danger']")
-    BUTTON_CLOSE = (By.XPATH, "//div[@id='cart']//button[@class='close']")
-    ORDER_TEXT = (By.XPATH, "//h2[text()='Оформление заказа']")
 
+    ORDER_TEXT = (By.XPATH, "//h2[text()='Оформление заказа']")
+    EMAIL_TEXT_ORDER = (By.XPATH, "//form[@action='cart/checkout']//label[@for='email']")
+    EMAIL_ORDER = (By.XPATH, "//form[@action='cart/checkout']//input[@id='email']")
+    PASSWORD_TEXT_ORDER = (By.XPATH, "//form[@action='cart/checkout']//label[@for='pasword']")
+    PASSWORD_ORDER = (By.XPATH, "//form[@action='cart/checkout']//input[@id='password']")
+    BUTTON_ORDER = (By.XPATH, "//button[@class='btn green']")
+
+    ALERT_SUCCESS_ORDER = (By.XPATH, "//div[@class='alert alert-success']")
+    ALERT_ERROR_ORDER = (By.XPATH, "//div[@class='alert alert-danger']")
+
+
+class SignupLoginPageLocators:
+    ENTER_TOP_TEXT = (By.XPATH, "//h1[text()='Вход']")
+    EMAIL_TEXT_LOGIN = (By.XPATH, "//form[@action='user/login']//label[@for='email']")
+    EMAIL_LOGIN = (By.XPATH, "//form[@action='user/login']//input[@id='email']")
+    PASSWORD_TEXT_LOGIN = (By.XPATH, "//form[@action='user/login']//label[@for='pasword']")
+    PASSWORD_LOGIN = (By.XPATH, "//form[@action='user/login']//input[@id='pasword']")
+    BUTTON_LOGIN = (By.XPATH, "//form[@action='user/login']//button[@class='btn button-gen']")
+    BUTTON_SIGNUP = (By.XPATH, "//form[@action='user/login']//a[@class='prior-two']")
+
+    SIGNUP_TOP_TEXT = (By.XPATH, "//h1[text()='Регистрация']")
+    EMAIL_TEXT_SIGNUP = (By.XPATH, "//form[@id='signup']//label[@for='email']")
+    EMAIL_SIGNUP = (By.XPATH, "//form[@id='signup']//input[@id='email']")
+    PASSWORD_TEXT_SIGNUP = (By.XPATH, "//form[@id='signup']//label[@for='pasword']")
+    PASSWORD_SIGNUP = (By.XPATH, "//form[@id='signup']//input[@id='pasword']")
+    SIGNUP_BUTTON = (By.XPATH, "//form[@id='signup']//button[@class='btn button-gen']")
+    LOGIN_BUTTON = (By.XPATH, "//form[@id='signup']//a[@class='prior-two']")
+
+    ALERT_SUCCESS_SIGNUP_LOGIN = (By.XPATH, "//div[@id='alert-success']")
+    ALERT_ERROR_SIGNUP_LOGIN = (By.XPATH, "//div[@class='alert alert-danger']")
+
+
+class CabinetPageLocators:
+    MAIN = (By.XPATH, "//ol[@class='breadcrumb']//a[@href='https://casenik.com.ua']")
+    USER_CABINET = (By.XPATH, "//li[text()='Личный кабинет']")
+    USER_CABINET_TEXT = (By.XPATH, "//div[@class='register-top heading']")
+    ORDER_HISTORY = (By.XPATH, "//a[@href='user/orders']")
+    CHECK_CART = (By.XPATH, "//li//a[@href='cart/show']")
+    CHECK_WISH = (By.XPATH, "//li//a[@href='wish/show']")
+    SHOW_VIEW = (By.XPATH, "//li//a[@href='main/showViewed']")
+    FEEDBACK_ERROR = (By.XPATH, "//li//a[@href='singlepage/feedback']")
+    CURRENCY_ACTUAL = (By.XPATH, "//li//a[@href='https://finance.i.ua/']")
+    VIDEO_VIEW = (
+        By.XPATH, "//li//a[@href='https://www.youtube.com/channel/UCCzEy1yfgV5kwDbO3qnAEzw?view_as=subscriber']")
+    USER_FEEDBACK = (By.XPATH, "//li//a[@href='singlepage/feedback'][text()=' Оставить отзыв о магазине']")
+    INFO = (By.XPATH, "//h4[text()='Мои данные ']")
+    NAME = (By.XPATH, "//p[text()='Имя']")
+    NAME_INPUT = (By.XPATH, "//input[@name='name']")
+    ADD_NAME = (By.XPATH, "//div[@class='cabmin-infa']//div[1]//a[text()='Добавить']")
+    PASSWORD = (By.XPATH, "//p[text()='Пароль']")
+    PASSWORD_INPUT = (By.XPATH, "//input[@name='password']")
+    EDIT_PASSWORD = (By.XPATH, "//div[@class='cabmin-infa']//div[2]//a[text()='Редактировать']")
+    EMAIL = (By.XPATH, "//p[text()='Email']")
+    EMAIL_INPUT = (By.XPATH, "//input[@name='email']")
+    EDIT_EMAIL = (By.XPATH, "//div[@class='cabmin-infa']//div[3]//a[text()='Редактировать']")
+    PHONE = (By.XPATH, "//p[text()='Номер телефона']")
+    PHONE_INPUT = (By.XPATH, "//input[@name='phone']")
+    ADD_PHONE = (By.XPATH, "//div[@class='cabmin-infa']//div[4]//a[text()='Добавить']")
+    ADDRESS = (By.XPATH, "//p[text()='Адрес']")
+    ADDRESS_INPUT = (By.XPATH, "//input[@name='address']")
+    ADD_ADDRESS = (By.XPATH, "//div[@class='cabmin-infa']//div[5]//a[text()='Добавить']")
+
+
+class CategoryPageLocators:
+    pass
+
+
+class SearchPageLocators:
+    pass
