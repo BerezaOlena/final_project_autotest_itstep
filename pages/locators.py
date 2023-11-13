@@ -150,8 +150,40 @@ class CabinetPageLocators:
 
 
 class CategoryPageLocators:
-    pass
+    TITLE_CATEGORY = (By.XPATH, "//h1[@class='mb-3 mt-0']")
+    AVAILABILITY_YES = (By.XPATH, "//div[@class='shop_sidebar']//section[3]/div[2]//label[1]/I")
+    AVAILABILITY_EXPECTED = (By.XPATH, "//div[@class='shop_sidebar']//section[3]/div[2]//label[2]/I")
+    AVAILABILITY_UNDER_ORDER = (By.XPATH, "//div[@class='shop_sidebar']//section[3]/div[2]//label[3]/I")
+    BREND_APPLE = (By.XPATH, "//div[@class='shop_sidebar']//section[1]/div[2]//label[1]/I")
+    BREND_XAOMI = (By.XPATH, "//div[@class='shop_sidebar']//section[1]/div[2]//label[2]/I")
+    BREND_HUAWEI = (By.XPATH, "//div[@class='shop_sidebar']//section[1]/div[2]//label[3]/I")
+    BREND_MEIZU = (By.XPATH, "//div[@class='shop_sidebar']//section[1]/div[2]//label[4]/I")
+    BREND_LENOVO = (By.XPATH, "//div[@class='shop_sidebar']//section[1]/div[2]//label[5]/I")
+    BREND_SAMSUNG = (By.XPATH, "//div[@class='shop_sidebar']//section[1]/div[2]//label[6]/I")
+    PRICE_RANGE_0_5 = (By.XPATH, "//div[@class='shop_sidebar']//section[2]/div[2]//label[1]/I")
+    PRICE_RANGE_5_10 = (By.XPATH, "//div[@class='shop_sidebar']//section[2]/div[2]//label[2]/I")
+    PRICE_RANGE_10_20 = (By.XPATH, "//div[@class='shop_sidebar']//section[2]/div[2]//label[3]/I")
+    PRICE_RANGE_20_50 = (By.XPATH, "//div[@class='shop_sidebar']//section[2]/div[2]//label[4]/I")
+    PRICE_RANGE_50_100 = (By.XPATH, "//div[@class='shop_sidebar']//section[2]/div[2]//label[5]/I")
+    PRICE_RANGE_MORE_100 = (By.XPATH, "//div[@class='shop_sidebar']//section[2]/div[2]//label[6]/I")
+    FINDING_ITEMS = (By.XPATH, "//div[@class='shop_product_count']")
+    SORT = (By.XPATH, "//span[@class='sorting_text']//i[@class='fas fa-chevron-down']")
+    SORT_DOWN = (By.XPATH, "//li[@class='shop_sorting_button sort-desc']")
+    SORT_UP = (By.XPATH, "//li[@class='shop_sorting_button sort-asc']")
+    MAIN_PAGE = (By.XPATH, "//ol//li[1]")
+    CATEGORY_PAGE = (By.XPATH, "//ol//li[2]")
+    PAGE_1_CATEGORY = (By.XPATH, "//ul[@class='pagination']//li[1]")
+    PAGE_2_CATEGORY = (By.XPATH, "//ul[@class='pagination']//li[2]")
+    PAGE_3_CATEGORY = (By.XPATH, "//ul[@class='pagination']//li[3]")
+    PAGE_NAV_LINK_CATEGORY = (By.XPATH, "//ul[@class='pagination']//li[4]")
 
 
 class SearchPageLocators:
-    pass
+    MAIN_PAGE_CATEGORY = (By.XPATH, "//ol[@class='breadcrumb']//li[1]")
+    SEARCH_PAGE = (By.XPATH, "//ol[@class='breadcrumb']//li[2]")
+    TITLE_SEARCH = (By.XPATH, "//h1[@class='pb-3']")
+    PAGE_1_SEARCH = (By.XPATH, "//ul[@class='pagination']//li[1]")
+    PAGE_2_SEARCH = (By.XPATH, "//ul[@class='pagination']//li[2]")
+    PAGE_3_SEARCH = (By.XPATH, "//ul[@class='pagination']//li[3]")
+    PAGE_NAV_LINK_SEARCH = (By.XPATH, "//ul[@class='pagination']//li[4]")
+    PAGE_NAV_LINK_END_SEARCH = (By.XPATH, "//ul[@class='pagination']//li[4]")
