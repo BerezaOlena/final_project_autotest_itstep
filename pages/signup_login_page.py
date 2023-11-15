@@ -3,7 +3,6 @@ import inspect
 
 
 class SignupLoginPage(base_page.BasePage):
-
     def is_button_enter_to_signup_login(self):
         assert self.click_element(*locators.BasePageLocators.LOGIN_SIGNUP), \
             "Element 'login' is not present or intractable"
@@ -40,6 +39,13 @@ class SignupLoginPage(base_page.BasePage):
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_password_login_input(self, password):
+        assert self.input_data(*locators.SignupLoginPageLocators.PASSWORD_LOGIN, password), \
+            "Element 'password_login_input' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
+    def is_email_password_input(self, email, password):
+        assert self.input_data(*locators.SignupLoginPageLocators.EMAIL_LOGIN, email), \
+            "Element 'email_login_input' is not present"
         assert self.input_data(*locators.SignupLoginPageLocators.PASSWORD_LOGIN, password), \
             "Element 'password_login_input' is not present"
         print(f"{inspect.currentframe().f_code.co_name} - OK")
@@ -122,5 +128,20 @@ class SignupLoginPage(base_page.BasePage):
 
     def is_login_button_push(self):
         assert self.click_element(*locators.SignupLoginPageLocators.LOGIN_BUTTON), \
+            "Element 'login_button_push' is not present or intractable"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
+    def is_logout_button(self):
+        assert self.is_element_present(*locators.SignupLoginPageLocators.LOGOUT_BUTTON), \
+            "Element 'logout_button' is not present"
+        print(f"\n{inspect.currentframe().f_code.co_name} - OK")
+
+    def is_cabinet_button(self):
+        assert self.is_element_present(*locators.SignupLoginPageLocators.CABINET_BUTTON), \
+            "Element 'cabinet_button' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
+    def is_logout_button_push(self):
+        assert self.click_element(*locators.SignupLoginPageLocators.LOGOUT_BUTTON), \
             "Element 'login_button_push' is not present or intractable"
         print(f"{inspect.currentframe().f_code.co_name} - OK")

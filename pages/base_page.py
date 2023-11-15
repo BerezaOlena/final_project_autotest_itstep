@@ -78,7 +78,7 @@ class BasePage:
 
     def get_attribute(self, how, what, data):
         try:
-            attribute = self.browser.find_element(how, what).get_attribute()
+            attribute = self.browser.find_element(how, what).get_attribute(data)
         except NoSuchElementException:
             return False
         return attribute

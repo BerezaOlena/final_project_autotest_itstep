@@ -35,9 +35,9 @@ class MainPage(base_page.BasePage):
             "Button 'warranty' is not present"
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
-    def is_button_login(self):
+    def is_button_login_signup(self):
         assert self.is_element_present(*locators.BasePageLocators.LOGIN_SIGNUP), \
-            "Button 'login' is not present"
+            "Button 'login_signup' is not present"
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_button_logo_icon(self):

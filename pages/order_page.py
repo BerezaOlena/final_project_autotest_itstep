@@ -1,5 +1,6 @@
 from ..pages import base_page, locators
 import inspect
+import re
 
 
 class OrderPage(base_page.BasePage):
@@ -7,7 +8,7 @@ class OrderPage(base_page.BasePage):
     def is_arrivals_table_8_push(self):
         assert self.click_element(*locators.MainPageLocators.ARRIVALS_TABLE_8), \
             "Element 'arrivals_table_8_push' is not present"
-        print(f"\n{inspect.currentframe().f_code.co_name} - OK")
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_arrivals_table_8_to_cart(self):
         assert self.is_element_present(*locators.OrderPageLocators.ARRIVALS_TABLE_8_TO_CART), \

@@ -1,5 +1,6 @@
 import pytest
 from ..pages.base_page import BasePage
+from ..pages.main_page import MainPage
 from ..pages.signup_login_page import SignupLoginPage
 from ..settings import sets
 import random
@@ -23,27 +24,50 @@ class TestSignupLoginPage:
         self.link_to_cabinet = browser.current_url
         page = SignupLoginPage(browser, self.link_to_cabinet)
         page.is_button_enter_to_signup_login()
+        page.is_enter_top_text()
+        page.is_email_text_login()
+        page.is_email_login()
+        page.is_password_text_login()
+        page.is_password_login()
+        page.is_button_signup()
+        page.is_button_login()
         page.is_button_signup_push()
         page.is_signup_top_text()
         page.is_email_text_signup()
         page.is_email_signup()
-        page.is_email_signup_input(self.email_for_signup_login)
         page.is_password_text_signup()
         page.is_password_signup()
-        page.is_password_signup_input(self.password_for_signup_login)
         page.is_login_button()
         page.is_signup_button()
+        page.explicitly_wait(5)
+
+    def test_signup(self, browser):
+        self.link_to_cabinet = browser.current_url
+        page = SignupLoginPage(browser, self.link_to_cabinet)
+        page.is_button_enter_to_signup_login()
+        page.is_button_signup_push()
+        page.is_email_signup_input(self.email_for_signup_login)
+        page.is_password_signup_input(self.password_for_signup_login)
         page.is_signup_button_push()
         page.is_alert_success()
+        page.explicitly_wait(5)
+
+    def test_login(self, browser):
+        self.link_to_cabinet = browser.current_url
+        page = SignupLoginPage(browser, self.link_to_cabinet)
         page.is_button_enter_to_signup_login()
-        page.is_enter_top_text()
-        page.is_email_text_login()
-        page.is_email_login()
-        page.is_email_login_input(self.email_for_signup_login)
-        page.is_password_text_login()
-        page.is_password_login()
-        page.is_password_login_input(self.password_for_signup_login)
-        page.is_button_signup()
-        page.is_button_login()
+        page.is_email_login_input(sets.TEST_EMAIL)
+        page.is_password_login_input(sets.PASSWORD)
         page.is_button_login_push()
         page.is_alert_success()
+        page.explicitly_wait(5)
+
+    def test_logout(self, browser):
+        self.link_to_cabinet = browser.current_url
+        page = SignupLoginPage(browser, self.link_to_cabinet)
+        page_m = MainPage(browser, self.link_to_cabinet)
+        page.is_logout_button()
+        page.is_cabinet_button()
+        page.is_logout_button_push()
+        page_m.is_button_login_signup()
+        page.explicitly_wait(5)

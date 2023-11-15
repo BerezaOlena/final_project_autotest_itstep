@@ -26,7 +26,7 @@ class TestMainPage:
         page.is_button_feedback()
         page.is_button_delivery()
         page.is_button_warranty()
-        page.is_button_login()
+        page.is_button_login_signup()
         page.is_button_logo_icon()
         page.is_button_search_input()
         page.is_button_search()

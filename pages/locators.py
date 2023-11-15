@@ -117,6 +117,8 @@ class SignupLoginPageLocators:
     ALERT_SUCCESS_SIGNUP_LOGIN = (By.XPATH, "//div[@id='alert-success']")
     ALERT_ERROR_SIGNUP_LOGIN = (By.XPATH, "//div[@class='alert alert-danger']")
 
+    LOGOUT_BUTTON = (By.XPATH, "//a[@href='user/logout']")
+    CABINET_BUTTON = (By.XPATH, "//a[@href='user/cabinet']")
 
 class CabinetPageLocators:
     MAIN = (By.XPATH, "//ol[@class='breadcrumb']//a[@href='https://casenik.com.ua']")
@@ -187,3 +189,7 @@ class SearchPageLocators:
     PAGE_3_SEARCH = (By.XPATH, "//ul[@class='pagination']//li[3]")
     PAGE_NAV_LINK_SEARCH = (By.XPATH, "//ul[@class='pagination']//li[4]")
     PAGE_NAV_LINK_END_SEARCH = (By.XPATH, "//ul[@class='pagination']//li[4]")
+
+
+class ProductPageLocators:
+    pass
