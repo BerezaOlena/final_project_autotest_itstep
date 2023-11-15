@@ -59,7 +59,8 @@ class MainPageLocators:
     ARRIVALS_PREVIOUS = (By.XPATH, "//div[@class='arrivals_nav_container']//i[@class='fas fa-chevron-left']")
     ARRIVALS_NEXT = (By.XPATH, "//div[@class='arrivals_nav_container']//i[@class='fas fa-chevron-right']")
     ARRIVALS_TABLE = (By.XPATH, "//div[@class='product_panel panel active']")
-    ARRIVALS_TABLE_8 = (By.XPATH, "//div[@class='new_arrivals']//div[@data-slick-index='2']/div[2]")
+    ARRIVALS_TABLE_8 = (
+        By.XPATH, "//div[@class='new_arrivals']//div[@data-slick-index='2']/div[2]//div[@class='product_name']")
 
     HITS_VIEW_ALL = (By.XPATH, "//div[@class='best_nav_container']//a[@href='main/showHit']")
     HITS_PREVIOUS = (By.XPATH, "//div[@class='best_prev best_nav']//i[@class='fas fa-chevron-left']")

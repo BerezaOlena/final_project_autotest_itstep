@@ -27,6 +27,7 @@ class TestOrderPage:
         page_l.is_email_login_input(sets.TEST_EMAIL)
         page_l.is_password_login_input(sets.PASSWORD)
         page_l.is_button_login_push()
+        page.is_logo_icon_push()
         page.is_arrivals_table_8_push()
         page.is_arrivals_table_8_to_cart()
         page.is_arrivals_table_8_to_cart_push()

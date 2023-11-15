@@ -4,6 +4,10 @@ import re
 
 
 class OrderPage(base_page.BasePage):
+    def is_logo_icon_push(self):
+        assert self.click_element(*locators.BasePageLocators.LOGO_ICON), \
+            "Button 'logo_icon' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_arrivals_table_8_push(self):
         assert self.click_element(*locators.MainPageLocators.ARRIVALS_TABLE_8), \
